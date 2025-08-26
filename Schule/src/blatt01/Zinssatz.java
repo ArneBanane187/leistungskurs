@@ -7,6 +7,11 @@ public class Zinssatz {
         double zinssatz = 2.25; //%
 
         double zinsen = (kapital_alt * zinssatz) / 100;
+        double  = kapital_alt * zinssatz;
+
+        System.out.println(zinsen);
+
+
 
 
 
