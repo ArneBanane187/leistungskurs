@@ -5,8 +5,11 @@ import java.util.Scanner;
 public class Zinssatz {
     public static void main(String[] args) {
 
-        double kapital_alt = 1220.0; //€
-        double zinssatz = 2.25; //%
+        Scanner input = new Scanner(System.in);
+        System.out.println("Nennen Sie ihr altes Kapital?");
+        double kapital_alt = input.nextDouble();
+        System.out.println("Nennen Sie den Zinssatz in Prozent?");
+        double zinssatz = input.nextDouble();
 
         double zinsen = (kapital_alt * zinssatz) / 100;
         double kapital_neu = kapital_alt + zinsen;

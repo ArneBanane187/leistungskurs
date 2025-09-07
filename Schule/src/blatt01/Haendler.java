@@ -6,9 +6,9 @@ public class Haendler {
         double normale_sd = 5; //€
         double mini_sd = 8; //€
         double micro_sd = 12; //€
-        double anzahl_normale = 3;
-        double anzahl_mini = 4;
-        double anzahlt_micro = 1;
+        int anzahl_normale = 3;
+        int anzahl_mini = 4;
+        int anzahlt_micro = 1;
 
         double gesamtpreis = anzahl_normale * normale_sd + anzahl_mini * mini_sd + anzahlt_micro * micro_sd;
 
