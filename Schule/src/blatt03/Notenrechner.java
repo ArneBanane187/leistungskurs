@@ -33,6 +33,7 @@ public class Notenrechner {
         }else {
             note = 6;
 
+        }
         //Ausgabe
             System.out.println("Erreichte Leistung:" + prozent + "%");
             System.out.println("Ihre Note ist: " + note);
