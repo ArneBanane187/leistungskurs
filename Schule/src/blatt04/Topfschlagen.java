@@ -20,6 +20,7 @@ public class Topfschlagen {
 
         while (true) {
             if(topfx == playerx && topfy == playery) {
+                System.out.println("Sie haben den Topf gefunden.");
                 break;
 
             }
