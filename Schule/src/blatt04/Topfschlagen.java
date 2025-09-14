@@ -15,10 +15,15 @@ public class Topfschlagen {
         int startx = 3;
         int starty = 3;
 
+        int altPlayerx = startx;
+        int altPlayery = starty;
+
         int playerx = startx;
         int playery = starty;
 
         while (true) {
+            altPlayerx = playerx;
+            altPlayery = playery;
             if(topfx == playerx && topfy == playery) {
                 System.out.println("Sie haben den Topf gefunden.");
                 break;
@@ -35,6 +40,19 @@ public class Topfschlagen {
             }else if (steuerung == 'a'){
                 playerx -= 1;
             }
+        }
+        if (playerx == -1) {
+            System.out.println("Hier ist der Suchbereich zu ende!");
+            playerx += 1;
+        } else if (playerx == 6) {
+            System.out.println("Hier ist der Suchbereich zu ende!");
+            playerx -= 1;
+        }else if (playery == -1){
+            System.out.println("Hier ist der Suchbereich zu ende!");
+            playery += 1;
+        }else if (playery == 6){
+            System.out.println("Hier ist der Suchbereich zu ende!");
+            playery -= 1;
         }
 
 
