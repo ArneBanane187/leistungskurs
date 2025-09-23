@@ -15,7 +15,7 @@ public class PasswortÜberprüfung {
             return;
         } else {
             System.out.println("Ihr Passwort wurde gespeichert!");
-        } if (passwort.)
+        }
 
     }
 }
