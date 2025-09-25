@@ -18,6 +18,8 @@ public class Wertetabelle {
         }
 
 
+
+
         //Beispiel x = 1
 
         int x = 1;
