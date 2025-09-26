@@ -34,6 +34,15 @@ public class GesuchtGefunden {
         System.out.println("Die Summe aller Elemente ist: " + sum);
 
         //Aufgabe d)
+        double mindiff = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            double diff = arr[i] - mindiff;
+            if (diff > mindiff) {
+                mindiff = diff;
+            }
+        }
+        System.out.println("Die kleinste Paardifferenz ist: " + mindiff);
+
 
     }
 
