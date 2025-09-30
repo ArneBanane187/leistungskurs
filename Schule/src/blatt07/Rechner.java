@@ -18,8 +18,9 @@ public class Rechner {
       * @param a erste Zahl
      * @param b zweite Zahl
      */
-    public static in add (int a, int b) {
+    public static int add (int a, int b) {
         System.out.println(a + b);
+        return a + b;
     }
 
     /**
