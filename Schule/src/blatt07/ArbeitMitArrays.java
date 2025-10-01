@@ -87,9 +87,9 @@ public class ArbeitMitArrays {
         System.out.println(" ] ");
     }
 
-    public static int istSortiert (int [] arr) {
+    //public static int istSortiert (int [] arr) {
 
-    }
+    //}
 
 
     public static void main(String[] args) {
