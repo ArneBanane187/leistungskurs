@@ -1,5 +1,7 @@
 package blatt08;
 
+import java.util.Scanner;
+
 public class SuchenUndErsetzen {
 
     public static String ersetzen (String str) {
@@ -14,6 +16,13 @@ public class SuchenUndErsetzen {
     }
 
     public static void main(String[] args) {
-        System.out.println("Jedes a ");
+        Scanner input = new Scanner(System.in);
+        System.out.println("Geben sie den Buchstaben ein welcher einen anderen ersetzt.");
+        char a = input.next().charAt(0);
+        System.out.println("Geben sie den Buchstaben ein der ersetzt werden soll.");
+        char b = input.next().charAt(0);
+
+        System.out.println(ersetzen());
+
     }
 }
