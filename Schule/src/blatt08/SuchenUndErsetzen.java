@@ -22,7 +22,7 @@ public class SuchenUndErsetzen {
         System.out.println("Geben sie den Buchstaben ein der ersetzt werden soll.");
         char b = input.next().charAt(0);
 
-        System.out.println(ersetzen());
+        //System.out.println(ersetzen());
 
     }
 }
