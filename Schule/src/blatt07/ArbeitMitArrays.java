@@ -87,6 +87,21 @@ public class ArbeitMitArrays {
         System.out.println(" ] ");
     }
 
+    /**
+     * Die Prozedur überprüft, ob das angegebene Array von klein nach groß sortiert ist
+     * @param index Array
+     * @return ausgabe als boolean (true/false)
+     */
+    public static boolean istSortiert (int [] index) {
+        for (int i = 1; i <= index.length - 1; i++) {
+            if (index[i-1] > index[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 
 
 
