@@ -51,9 +51,10 @@ public class MultiArrays {
         return arr;
     }
     //e)
-    public static int [][] createCountingArray(int a,int b){
+    //public static int [][] createCountingArray(int a,int b){
 
-    }
+
+    //}
 
 
 
