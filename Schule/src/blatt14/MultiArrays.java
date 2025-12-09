@@ -4,6 +4,11 @@ import java.sql.SQLOutput;
 
 public class MultiArrays {
     //a)
+
+    /**
+     * Gibt einen 2d IntArray aus
+     * @param arr
+     */
     public static void print2DArray(int[][] arr){
         for(int i=0;i<arr.length;i++){
             for(int j=0;j<arr[i].length;j++){
@@ -13,6 +18,11 @@ public class MultiArrays {
         }
     }
     //b)
+
+    /**
+     * Gibt einen 2d Double Array aus
+     * @param arr
+     */
     public static void print2DArray(double[][] arr){
         for(int i=0;i<arr.length;i++){
             for(int j=0;j<arr[i].length;j++){
@@ -21,6 +31,11 @@ public class MultiArrays {
             System.out.println();
         }
     }
+
+    /**
+     * Gibt einen 2d Charr Array aus
+     * @param arr
+     */
     public static void print2DArray(char[][] arr){
         for(int i=0;i<arr.length;i++){
             for(int j=0;j<arr[i].length;j++){
@@ -30,6 +45,15 @@ public class MultiArrays {
         }
     }
     //c)
+
+    /**
+     * Gibt ein zufähligen 2d Int Array aus, welcher den Array mit zwei übergebenen Längen und zwei übergebenen Grenzen erstellt
+     * @param a erste übergebene Länge
+     * @param b zweite übergebene Länge
+     * @param p erste übergebene Grenze
+     * @param q zweite übergebene Grenze
+     * @return
+     */
     public static int[][] createRandom2DIntArray(int a,int b,int p,int q){
         int[][] arr = new int[a][b];
         for(int i=0;i<arr.length;i++){
@@ -41,6 +65,13 @@ public class MultiArrays {
         return arr;
     }
     //d)
+
+    /**
+     * Gibt einen zufähligen 2d Double Array aus mit den Zahlen zwischen 0 und 1
+     * @param a erste übergebene Länge
+     * @param b zweite übergebene Länge
+     * @return
+     */
     public static double[][] createRandom2DDoubleArray(int a,int b){
         double[][] arr = new double[a][b];
         for(int i=0;i<arr.length;i++){
@@ -51,10 +82,47 @@ public class MultiArrays {
         return arr;
     }
     //e)
-    //public static int [][] createCountingArray(int a,int b){
 
+    /**
+     * erstellt einen durchnommerierten 2d Int Array
+     * @param a erste übergebene Länge
+     * @param b zweite übergebene Länge
+     * @return
+     */
+    public static int [][] createCountingArray(int a,int b){
+        int [][]arr = new int[a][b];
+        int count = 0;
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                arr[i][j] = count;
+                count++;
+            }
+        }
+        return arr;
+    }
 
-    //}
+    //f)
+
+    /**
+     * erstellt einen leeren 2d Char Array mit vorgegebenen Längen
+     * @param a erste übergebene Länge
+     * @param b zweite übergebene Länge
+     * @return
+     */
+    public static char [][] createEmpty2DCharArray(int a,int b){
+        char [][]arr = new char[a][b];
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[i].length;j++){
+                arr[i][j]=' ';
+            }
+        }
+        return arr;
+    }
+    //g)
+    public static char [][] istIdentisch(char [][]arr,char [][]arr2){
+
+        }
+    }
 
 
 
@@ -75,6 +143,12 @@ public class MultiArrays {
         System.out.println("Ausgabe Random DoubleArray");
         double[][] arrRandom2 = createRandom2DDoubleArray(3,4);
         print2DArray(arrRandom2);
+        System.out.println("Ausgabe Counting Array");
+        int[][] arrCounting = createCountingArray(3,4);
+        print2DArray(arrCounting);
+        System.out.println("Ausgabe Empty Array");
+        char[][] arrEmpty = createEmpty2DCharArray(3,4);
+        print2DArray(arrEmpty);
 
 
     }
