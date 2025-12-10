@@ -89,7 +89,7 @@ public class MultiArrays {
      * @param b zweite übergebene Länge
      * @return
      */
-    public static int [][] createCountingArray(int a,int b){
+    public static int[][] createCountingArray(int a,int b){
         int [][]arr = new int[a][b];
         int count = 0;
         for(int i=0;i<arr.length;i++){
@@ -109,7 +109,7 @@ public class MultiArrays {
      * @param b zweite übergebene Länge
      * @return
      */
-    public static char [][] createEmpty2DCharArray(int a,int b){
+    public static char[][] createEmpty2DCharArray(int a,int b){
         char [][]arr = new char[a][b];
         for(int i=0;i<arr.length;i++){
             for(int j=0;j<arr[i].length;j++){
@@ -119,10 +119,10 @@ public class MultiArrays {
         return arr;
     }
     //g)
-    public static char [][] istIdentisch(char [][]arr,char [][]arr2){
+    //public static char[][] istIdentisch(char[][] arr,char[][] arr2){
 
-        }
-    }
+
+    //}
 
 
 

@@ -47,6 +47,10 @@ public class Simulationen {
 
     }
 
+    public static char getNorden(char[][] charr, char ein, boolean dopplung) {
+
+    }
+
 
     public static void main(String[] args) {
         SchischVisualizer sv = new SchischVisualizer();
