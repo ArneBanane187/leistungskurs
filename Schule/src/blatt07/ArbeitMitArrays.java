@@ -100,6 +100,124 @@ public class ArbeitMitArrays {
         }
         return true;
     }
+    /**
+     * Die Prozedur verschiebt das ganze Array um eine Stelle nach links (letzte Stelle wird zu zur ersten Stelle)
+     * @param arr Array
+     */
+    public static void shiftLeft (int [] arr) {
+        if (arr.length == 0) return;
+        System.out.print("[ ");
+        for (int i = 0; i <= arr.length - 1; i++) {
+            if (i == arr.length - 1) {
+                System.out.print(arr[i]);
+            } else {
+                System.out.print(arr[i] + " | ");
+            }
+        }
+        System.out.println(" ]");
+        int zwischenSpeicher = 0;
+        for (int i = 0; i < arr.length - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr[arr.length - 1] = zwischenSpeicher;
+        System.out.print("[ ");
+        for (int i = 0; i <= arr.length - 1; i++) {
+            if (i == arr.length - 1) {
+                System.out.print(arr[i]);
+            } else {
+                System.out.print(arr[i] + " | ");
+            }
+        }
+        System.out.println(" ]");
+    }
+    /**
+     * Die Prozedur verschiebt das ganze Array um eine Stelle nach rechts (erste Stelle wird zu zur letzten Stelle)
+     * @param arr Array
+     */
+    public static void shiftRight (int [] arr) {
+        if (arr.length == 0) return;
+        System.out.print("[ ");
+        for (int i = 0; i <= arr.length - 1; i++) {
+            if (i == arr.length - 1) {
+                System.out.print(arr[i]);
+            } else {
+                System.out.print(arr[i] + " | ");
+            }
+        }
+        System.out.println(" ]");
+        int zwischenSpeicher = arr[arr.length - 1];
+        for (int i = arr.length - 1; i > 0; i--) {
+            arr[i] = arr[i - 1];
+        }
+        arr[0] = zwischenSpeicher;
+        System.out.print("[ ");
+        for (int i = 0; i <= arr.length - 1; i++) {
+            if (i == arr.length - 1) {
+                System.out.print(arr[i]);
+            } else {
+                System.out.print(arr[i] + " | ");
+            }
+        }
+        System.out.println(" ]");
+    }
+    /**
+     * Die Prozedur verschiebt das ganze Array um eine Stelle nach links (letzte Stelle wird mit 0 aufgefüllt)
+     * @param arr Array
+     */
+    public static void shiftLeftAbsolute (int [] arr) {
+        if (arr.length == 0) return;
+        System.out.print("[ ");
+        for (int i = 0; i <= arr.length - 1; i++) {
+            if (i == arr.length - 1) {
+                System.out.print(arr[i]);
+            } else {
+                System.out.print(arr[i] + " | ");
+            }
+        }
+        System.out.println(" ]");
+        for (int i = 0; i < arr.length - 1; i++) {
+            arr[i] = arr[i + 1];
+        }
+        arr[arr.length - 1] = 0;
+        System.out.print("[ ");
+        for (int i = 0; i <= arr.length - 1; i++) {
+            if (i == arr.length - 1) {
+                System.out.print(arr[i]);
+            } else {
+                System.out.print(arr[i] + " | ");
+            }
+        }
+        System.out.println(" ]");
+    }
+    /**
+     * Die Prozedur verschiebt das ganze Array um eine Stelle nach rechts (erste Stelle wird mit 0 aufgefüllt)
+     * @param arr Array
+     */
+    public static void shiftRightAbsolute (int [] arr) {
+        if (arr.length == 0) return;
+        System.out.print("[ ");
+        for (int i = 0; i <= arr.length - 1; i++) {
+            if (i == arr.length - 1) {
+                System.out.print(arr[i]);
+            } else {
+                System.out.print(arr[i] + " | ");
+            }
+        }
+        System.out.println(" ]");
+        for (int i = arr.length - 1; i > 0; i--) {
+            arr[i] = arr[i - 1];
+        }
+        arr[0] = 0;
+        System.out.print("[ ");
+        for (int i = 0; i <= arr.length - 1; i++) {
+            if (i == arr.length - 1) {
+                System.out.print(arr[i]);
+            } else {
+                System.out.print(arr[i] + " | ");
+            }
+        }
+        System.out.println(" ]");
+    }
 
 
 
