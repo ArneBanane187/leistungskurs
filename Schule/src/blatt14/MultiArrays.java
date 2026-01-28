@@ -184,4 +184,8 @@ public class MultiArrays {
 
 
     }
+
+    public static char[][] createEmpty2DArray(int h, int b) {
+        return null;
+    }
 }
