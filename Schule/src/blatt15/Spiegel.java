@@ -26,10 +26,10 @@ public class Spiegel {
         return charr;
     }
 
-    public static void zufallSpiegel(char[][] charr, int ws, ) {
+    public static void zufallSpiegel(char[][] charr ) {
         for (int i = 0; i < charr.length; i++) {
             for (int j = 0; j < charr[0].length; j++) {
-                Simulationen.fuellen(, ws);
+               // Simulationen.fuellen();
             }
         }
 
