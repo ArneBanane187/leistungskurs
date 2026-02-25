@@ -18,7 +18,7 @@ public class Farben {
             b++;
         }
 
-        spielfeld = blatt14.MultiArrays.createEmpty2DArray(h, b);
+        //spielfeld = blatt14.MultiArrays.createEmpty2DArray(h, b);
 
         for (int i = 0; i < spielfeld.length; i++) {
             spielfeld[i][0] = '8';
