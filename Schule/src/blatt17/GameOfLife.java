@@ -8,10 +8,52 @@ public class GameOfLife {
     public static void initiSpielfeld(int h, int b) {
         spielfeld = blatt14.MultiArrays.createEmpty2DCharArray(h, b);
     }
-
-    public static void Random (double a){
+    //a)
+    public static void random (double a){
         blatt14.Simulationen.fuellen(spielfeld, '9', a);
     }
+
+    //b)
+    public static void weiter() {
+        int zeilen = spielfeld.length;
+        int spalten = spielfeld[0].length;
+
+
+        char[][] naechstesFeld = new char[spielfeld.length][spielfeld[0].length];
+
+        for (int z = 0; z < zeilen; z++) {
+            for (int s = 0; s < spalten; s++) {
+
+                // 1. Nachbarn zählen (mit unserer Methode von vorhin)
+                int nachbarn = countLebendeNachbarzellen(z, s, spielfeld);
+
+                // 2. Regeln anwenden
+                if (spielfeld[z][s] == 'g') {
+                    // Zelle lebt aktuell
+                    if (nachbarn == 2 || nachbarn == 3) {
+                        naechstesFeld[z][s] = 'g'; // Überlebt (Regel 3)
+                    } else {
+                        naechstesFeld[z][s] = 'r'; // Stirbt (Regel 2 & 4)
+                    }
+                } else {
+                    // Zelle ist aktuell tot
+                    if (nachbarn == 3) {
+                        naechstesFeld[z][s] = 'g'; // Neugeburt (Regel 1)
+                    } else {
+                        naechstesFeld[z][s] = 'r'; // Bleibt tot
+                    }
+                }
+            }
+        }
+
+        // 3. Das bestehende Spielfeld mit den neuen Werten aktualisieren
+        for (int z = 0; z < zeilen; z++) {
+            for (int s = 0; s < spalten; s++) {
+                spielfeld[z][s] = naechstesFeld[z][s];
+            }
+        }
+    }
+
 
     //Regeln der Zellen
 
@@ -61,11 +103,12 @@ public class GameOfLife {
         initiSpielfeld(10, 10);
         sv.step(spielfeld);
 
-        Random(0.4);
+        random(0.4);
         sv.step(spielfeld);
 
-
+        calculateNextGeneration(10, 10, spielfeld);
         sv.step(spielfeld);
+
 
 
 
