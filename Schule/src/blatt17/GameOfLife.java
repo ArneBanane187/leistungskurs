@@ -14,7 +14,7 @@ public class GameOfLife {
     }
 
     //b)
-    public static void weiter() {
+    public static void weiter(int w) {
         int zeilen = spielfeld.length;
         int spalten = spielfeld[0].length;
 
@@ -107,6 +107,9 @@ public class GameOfLife {
         sv.step(spielfeld);
 
         calculateNextGeneration(10, 10, spielfeld);
+        sv.step(spielfeld);
+
+        weiter(10);
         sv.step(spielfeld);
 
 
