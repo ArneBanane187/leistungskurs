@@ -9,28 +9,27 @@ public class LangtonsAmeisen {
         SchischVisualizer sv = new SchischVisualizer();
 
         char[][] spielfeld = blatt14.MultiArrays.createEmpty2DCharArray(100,100);
+        char[][] spielfeldAlt = blatt14.MultiArrays.copy2DCharArray(spielfeld);
+        blatt14.Simulationen.fuellen(spielfeld,'1',w);
+
+
 
         for(int j=0;j<z;j++){
-            char[][] spielfeldNeu = blatt14.MultiArrays.copy2DCharArray(spielfeld);
-
             for(int k=0;k<spielfeld.length;k++){
                 for(int l=0;l<spielfeld[1].length;l++){
-
-                    if(spielfeld[k][l]==' '){
-                        if(Math.random()< w){
-                            spielfeldNeu[k][l]='1';
-                        }
-                    }
+                    spielfeldAlt[49][49] = 'P';
                 }
             }
-            sv.step(spielfeldNeu);
+            sv.step(spielfeld);
         }
         sv.start();
     }
 
 
+
+
     public static void main(String[] args) {
-        feld(10, 0.4);
+        feld(10, 15);
 
 
     }
