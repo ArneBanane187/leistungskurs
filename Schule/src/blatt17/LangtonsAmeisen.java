@@ -1,5 +1,6 @@
 package blatt17;
 
+import blatt14.MultiArrays;
 import schisch_visualizer.SchischVisualizer;
 
 public class LangtonsAmeisen {
@@ -8,7 +9,7 @@ public class LangtonsAmeisen {
 
         SchischVisualizer sv = new SchischVisualizer();
 
-        char[][] spielfeld = blatt14.MultiArrays.createEmpty2DCharArray(100,100);
+        char[][] spielfeld = MultiArrays.createEmpty2DCharArray(100,100);
         char[][] spielfeldAlt = blatt14.MultiArrays.copy2DCharArray(spielfeld);
         blatt14.Simulationen.fuellen(spielfeld,'1',w);
 
@@ -17,7 +18,11 @@ public class LangtonsAmeisen {
         for(int j=0;j<z;j++){
             for(int k=0;k<spielfeld.length;k++){
                 for(int l=0;l<spielfeld[1].length;l++){
-                    spielfeldAlt[49][49] = 'P';
+                    spielfeldAlt[49][49] = 'v';
+
+                    if(spielfeldAlt[k][l] == ' '){
+
+                    }
                 }
             }
             sv.step(spielfeld);
