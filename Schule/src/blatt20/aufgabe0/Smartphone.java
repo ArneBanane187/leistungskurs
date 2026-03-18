@@ -107,4 +107,22 @@ public class Smartphone {
         this.lautstaerke = Math.max(lautstaerke, 100);
         this.lautstaerke = Math.min(lautstaerke, 0);
     }
+
+    public double getDisplaygroesse() {
+        return displaygroesse;
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || ! (o instanceof  Smartphone)) {
+            return false;
+        }
+        Smartphone a = (Smartphone) o;
+
+        return this.marke.equals(a.marke) && this.modell.equals(a.modell) && this.akkustand == a.akkustand && this.preis == a.preis && this.speicherplatz == a.speicherplatz;
+
+
+    }
 }

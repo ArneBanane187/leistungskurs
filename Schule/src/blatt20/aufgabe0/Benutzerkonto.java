@@ -6,7 +6,7 @@ public class Benutzerkonto {
     private String email;
     private String geburtsdatum;
     private double gutscheinguthaben;
-    String gutscheinCode = "Jaaa";
+    String gutscheinCode[] = ; //TODO: Array für mehrere Gutscheincodes?
 
 
     public Benutzerkonto (double gutscheinguthaben, String benutzername, String password, String email, String geburtsdatum) {
@@ -18,6 +18,46 @@ public class Benutzerkonto {
 
     }
 
+    public void setBenutzername(String benutzername, String password) {
+        if(password.equals(this.password)) {
+            this.benutzername = benutzername;
+        }
+    } //TODO: ?
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getBenutzername() {
+        return benutzername;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getGeburtsdatum() {
+        return geburtsdatum;
+    }
+
+    public double getGutscheinguthaben() {
+        return gutscheinguthaben;
+    }
+
+    public String getGutscheinCode() {
+        return gutscheinCode;
+    }
+
+   public String setGutscheinCode(String gutscheinCode) {
+        if(gutscheinCode.equals(this.gutscheinCode)) {
+            this.gutscheinguthaben = Math.random();
+        }
+        return gutscheinguthaben;
+   }
     public boolean anmelden(String password) {
         if(this.password.equals(password)) {
             return true;
@@ -28,7 +68,7 @@ public class Benutzerkonto {
     public boolean passwordAendern(String passwordAlt, String passwordNeu) {
         if(anmelden(passwordAlt)) {
             this.password = passwordNeu;
-
+            return true;
         }
         return false;
     }
@@ -38,5 +78,9 @@ public class Benutzerkonto {
             this.gutscheinguthaben = gutscheinguthaben;
         }
     }
+
+
+
+
 
 }
