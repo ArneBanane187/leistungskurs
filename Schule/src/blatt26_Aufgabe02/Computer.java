@@ -2,7 +2,7 @@ package blatt26_Aufgabe02;
 
 import java.util.Comparator;
 
-public class Computer implements Comparator<Computer> {
+public class Computer implements Comparable<Computer> {
     private Prozessor p;
     private int ram;
     private int speicher;
@@ -73,4 +73,6 @@ public class Computer implements Comparator<Computer> {
         }
 
     }
+
+
 }

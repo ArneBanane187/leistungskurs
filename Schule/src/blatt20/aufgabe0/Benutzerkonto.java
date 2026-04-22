@@ -6,7 +6,7 @@ public class Benutzerkonto {
     private String email;
     private String geburtsdatum;
     private double gutscheinguthaben;
-    String gutscheinCode[] = ; //TODO: Array für mehrere Gutscheincodes?
+    String[] gutscheinCode; //TODO: Array für mehrere Gutscheincodes?
 
 
     public Benutzerkonto (double gutscheinguthaben, String benutzername, String password, String email, String geburtsdatum) {
@@ -15,6 +15,8 @@ public class Benutzerkonto {
         this.email = email;
         this.geburtsdatum = geburtsdatum;
         this.gutscheinguthaben = 0;
+
+
 
     }
 
@@ -48,11 +50,11 @@ public class Benutzerkonto {
         return gutscheinguthaben;
     }
 
-    public String getGutscheinCode() {
+    public String[] getGutscheinCode() {
         return gutscheinCode;
     }
 
-   public String setGutscheinCode(String gutscheinCode) {
+   public double setGutscheinCode(String gutscheinCode) {
         if(gutscheinCode.equals(this.gutscheinCode)) {
             this.gutscheinguthaben = Math.random();
         }

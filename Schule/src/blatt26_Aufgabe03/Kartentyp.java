@@ -1,6 +1,6 @@
 package blatt26_Aufgabe03;
 
-public enum Karten {
+public enum Kartentyp {
     SCHERE,
     STEIN,
     PAPIER
