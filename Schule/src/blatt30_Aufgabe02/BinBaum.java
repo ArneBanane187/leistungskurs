@@ -29,7 +29,7 @@ public class BinBaum  {
         }
         return null;
     }
-
+/*
     public void add(int wert) {
 
         Node newNode = new Node(root.getWert());
@@ -61,5 +61,7 @@ public class BinBaum  {
             }
         }
     }
+
+ */
 
 }

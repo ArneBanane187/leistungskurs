@@ -39,6 +39,6 @@ public abstract class Node {
         Node[] vorgaenger = null;
         Node[] nachfolger = null;
 
-
+        return vorgaenger;
     }
 }
