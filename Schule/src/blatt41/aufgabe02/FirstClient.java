@@ -62,14 +62,14 @@ public class FirstClient {
         return null;
     }
 
-    // Kommunikation durchführen
+
     public void communicate(Socket socket) throws IOException {
 
         sendMessage(socket,
                 new Nachricht("GREI", " Hallo"));
 
         Nachricht nachricht = receiveMessage(socket);
-        System.out.println("CLIENT: "
+        System.out.println("Server: "
                 + nachricht.getProtokoll()
                 + nachricht.getNachricht());
 
@@ -81,7 +81,7 @@ public class FirstClient {
                 new Nachricht("ANSI ", eingabe));
 
         nachricht = receiveMessage(socket);
-        System.out.println("CLIENT: "
+        System.out.println("Server: "
                 + nachricht.getProtokoll()
                 + nachricht.getNachricht());
         socket.close();
